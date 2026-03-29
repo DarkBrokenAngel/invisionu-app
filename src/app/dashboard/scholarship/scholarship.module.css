@@ -1,0 +1,42 @@
+.page { max-width: 600px; margin: 0 auto; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.header { margin-bottom: 32px; }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.subtitle { font-size: 14px; color: var(--text-tertiary); }
+
+.statusCard { display: flex; align-items: center; gap: 16px; padding: 24px; border-radius: 16px; margin-bottom: 28px; }
+.statusActive { background: rgba(0,230,118,0.06); border: 1px solid rgba(0,230,118,0.2); }
+.statusFrozen { background: rgba(68,138,255,0.06); border: 1px solid rgba(68,138,255,0.2); }
+.statusIcon { font-size: 36px; }
+.statusLabel { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.statusValue { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+.statusActive .statusValue { color: var(--success); }
+.statusFrozen .statusValue { color: var(--info); }
+.frozenInfo { margin-left: auto; font-size: 13px; color: var(--text-tertiary); }
+
+.durationSection { margin-bottom: 20px; }
+.durationSection h3 { font-size: 16px; font-weight: 600; margin-bottom: 14px; }
+.durationGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.durationCard { padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; text-align: center; display: flex; flex-direction: column; gap: 6px; transition: all 0.3s; }
+.durationCard:hover { border-color: var(--border-hover); }
+.durationActive { border-color: var(--neon) !important; background: rgba(200,255,0,0.04); box-shadow: var(--shadow-neon); }
+.durationIcon { font-size: 24px; }
+.durationLabel { font-size: 14px; font-weight: 600; }
+.durationMonths { font-size: 12px; color: var(--text-muted); }
+
+.warningCard { padding: 14px 18px; background: rgba(255,214,0,0.06); border: 1px solid rgba(255,214,0,0.2); border-radius: 12px; font-size: 13px; color: var(--warning); margin-bottom: 20px; line-height: 1.5; }
+
+/* Ice Animation */
+.iceAnimation { text-align: center; padding: 60px; position: relative; }
+.iceAnimation p { font-size: 18px; color: var(--info); font-weight: 600; }
+.iceParticles { position: absolute; inset: 0; pointer-events: none; display: flex; justify-content: center; }
+.iceParticle { position: absolute; top: 50%; left: 50%; font-size: var(--size); animation: iceFloat 1.5s ease-out forwards; animation-delay: var(--delay); }
+@keyframes iceFloat { 0% { transform: translate(0,0) scale(1); opacity: 1; } 100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0; } }
+
+/* Confirm Modal */
+.confirmOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 200; backdrop-filter: blur(4px); animation: fadeIn 0.2s; }
+.confirmCard { padding: 32px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; max-width: 400px; text-align: center; animation: scaleIn 0.3s ease-out; }
+@keyframes scaleIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.confirmCard h3 { font-size: 20px; margin-bottom: 12px; }
+.confirmCard p { font-size: 14px; color: var(--text-tertiary); margin-bottom: 24px; line-height: 1.5; }
+.confirmActions { display: flex; gap: 12px; justify-content: center; }

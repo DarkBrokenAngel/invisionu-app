@@ -1,0 +1,47 @@
+.page { max-width: 800px; margin: 0 auto; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.header { margin-bottom: 32px; }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.subtitle { font-size: 14px; color: var(--text-tertiary); }
+
+.dropzone { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 60px 40px; background: var(--bg-card); border: 2px dashed var(--border); border-radius: 20px; cursor: pointer; transition: all 0.3s; text-align: center; }
+.dropzone:hover, .dropzoneActive { border-color: var(--neon); background: rgba(200,255,0,0.03); }
+.dropIcon { font-size: 48px; margin-bottom: 8px; }
+.dropzone h3 { font-size: 16px; font-weight: 600; color: var(--text-secondary); }
+.dropzone p { font-size: 13px; color: var(--text-muted); }
+.formats { font-size: 11px; color: var(--text-muted); margin-top: 8px; }
+
+.analyzingCard { text-align: center; padding: 60px 40px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; }
+.analyzingSpinner { width: 48px; height: 48px; border: 3px solid rgba(255,255,255,0.1); border-top-color: var(--neon); border-radius: 50%; margin: 0 auto 20px; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.analyzingBar { height: 4px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; margin-top: 20px; max-width: 300px; margin-left: auto; margin-right: auto; }
+.analyzingFill { height: 100%; width: 60%; background: var(--gradient-neon); border-radius: 999px; animation: loading 2s ease-in-out infinite; }
+@keyframes loading { 0% { width: 0; margin-left: 0; } 50% { width: 60%; margin-left: 20%; } 100% { width: 0; margin-left: 100%; } }
+
+.results { display: flex; flex-direction: column; gap: 20px; }
+
+.matchCard { text-align: center; padding: 40px; background: var(--bg-card); border: 1px solid var(--border-neon); border-radius: 20px; box-shadow: var(--shadow-neon); }
+.matchCircle { width: 120px; height: 120px; margin: 0 auto 16px; border-radius: 50%; border: 4px solid var(--neon); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(200,255,0,0.15); }
+.matchScore { font-family: var(--font-display); font-size: 36px; font-weight: 800; color: var(--neon); }
+.matchCard h3 { font-size: 14px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.infoGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.infoCard { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; text-align: center; display: flex; flex-direction: column; gap: 6px; }
+.infoIcon { font-size: 28px; }
+.infoValue { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--neon); }
+.infoLabel { font-size: 12px; color: var(--text-tertiary); }
+
+.skillsCard { padding: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
+.skillsCard h3 { font-size: 16px; font-weight: 600; margin-bottom: 20px; }
+.skillsList { display: flex; flex-direction: column; gap: 14px; }
+.skillRow { display: flex; align-items: center; gap: 12px; }
+.skillName { width: 130px; font-size: 13px; color: var(--text-secondary); }
+.skillBarTrack { flex: 1; height: 8px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; }
+.skillBarFill { height: 100%; background: var(--gradient-neon); border-radius: 999px; animation: growWidth 1s ease-out backwards; }
+@keyframes growWidth { from { width: 0 !important; } }
+.skillLevel { width: 40px; text-align: right; font-size: 13px; font-weight: 600; color: var(--neon); }
+
+.suggestionsCard { padding: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
+.suggestionsCard h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; }
+.suggestionsCard ul { display: flex; flex-direction: column; gap: 10px; padding-left: 8px; }
+.suggestionsCard li { font-size: 14px; color: var(--text-secondary); padding: 8px 12px; background: rgba(200,255,0,0.04); border-radius: 10px; border-left: 3px solid var(--neon); }

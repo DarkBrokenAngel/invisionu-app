@@ -1,0 +1,32 @@
+.page { max-width: 800px; margin: 0 auto; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.header { margin-bottom: 32px; }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.subtitle { font-size: 14px; color: var(--text-tertiary); }
+
+.countdownCard { padding: 40px; background: var(--bg-card); border: 1px solid var(--border-neon); border-radius: 20px; text-align: center; margin-bottom: 32px; box-shadow: var(--shadow-neon); }
+.countdownLabel { font-size: 14px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; }
+.countdownGrid { display: flex; justify-content: center; gap: 20px; }
+.countdownItem { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.countdownNum { font-family: var(--font-display); font-size: 48px; font-weight: 800; color: var(--neon); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; background: rgba(200,255,0,0.06); border: 1px solid rgba(200,255,0,0.15); border-radius: 16px; }
+.countdownUnit { font-size: 12px; color: var(--text-muted); }
+
+.benefitsSection { margin-bottom: 32px; }
+.benefitsTitle { font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+.benefitsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.benefitCard { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; transition: all 0.3s; }
+.benefitCard:hover { border-color: var(--border-neon); transform: translateY(-2px); }
+.benefitIcon { font-size: 28px; margin-bottom: 10px; }
+.benefitCard h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.benefitCard p { font-size: 13px; color: var(--text-tertiary); line-height: 1.5; }
+
+.ctaCard { padding: 40px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; text-align: center; }
+.ctaText { font-size: 15px; color: var(--text-secondary); margin-bottom: 20px; }
+
+.appliedState { animation: scaleIn 0.5s ease-out; }
+@keyframes scaleIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.appliedIcon { font-size: 56px; margin-bottom: 12px; }
+.appliedState h2 { font-family: var(--font-display); font-size: 24px; color: var(--neon); margin-bottom: 8px; }
+.appliedBadge { font-size: 18px; color: var(--neon); font-weight: 600; }
+
+@media (max-width: 600px) { .benefitsGrid { grid-template-columns: 1fr; } .countdownNum { font-size: 32px; width: 60px; height: 60px; } }

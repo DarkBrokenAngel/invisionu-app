@@ -1,0 +1,38 @@
+.page { max-width: 800px; margin: 0 auto; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.header { margin-bottom: 32px; }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.subtitle { font-size: 14px; color: var(--text-tertiary); }
+
+.editorSection { margin-bottom: 28px; }
+.editor { width: 100%; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; color: var(--text-primary); font-size: 15px; line-height: 1.8; resize: vertical; min-height: 250px; transition: border-color 0.2s; font-family: var(--font-primary); }
+.editor:focus { border-color: var(--neon); box-shadow: 0 0 0 3px rgba(200,255,0,0.08); }
+.editor::placeholder { color: var(--text-muted); }
+.editor:disabled { opacity: 0.7; }
+
+.editorFooter { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; flex-wrap: wrap; gap: 12px; }
+.wordCount { font-size: 13px; color: var(--text-muted); }
+.wordCountGood { color: var(--success); }
+
+.results { display: flex; flex-direction: column; gap: 20px; animation: fadeIn 0.6s ease-out; }
+
+.scoresGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.scoreCard { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; text-align: center; transition: all 0.3s; }
+.scoreCard:hover { border-color: var(--border-neon); }
+.scoreIcon { font-size: 28px; margin-bottom: 8px; }
+.scoreValue { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--neon); }
+.scoreLabel { font-size: 12px; color: var(--text-tertiary); margin: 4px 0 12px; }
+.scoreBarTrack { height: 6px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; }
+.scoreBarFill { height: 100%; background: var(--gradient-neon); border-radius: 999px; transition: width 1.5s ease-out; }
+
+.themesCard { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
+.themesCard h3 { font-size: 16px; font-weight: 600; margin-bottom: 14px; }
+.themeTags { display: flex; flex-wrap: wrap; gap: 8px; }
+.themeTag { padding: 6px 14px; background: rgba(200,255,0,0.08); border: 1px solid rgba(200,255,0,0.2); border-radius: 999px; font-size: 13px; color: var(--neon); font-weight: 500; }
+
+.suggestionsCard { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
+.suggestionsCard h3 { font-size: 16px; font-weight: 600; margin-bottom: 14px; }
+.suggestionsCard ul { display: flex; flex-direction: column; gap: 10px; }
+.suggestionsCard li { font-size: 14px; color: var(--text-secondary); padding: 10px 14px; background: rgba(200,255,0,0.03); border-radius: 10px; border-left: 3px solid var(--neon); }
+
+@media (max-width: 600px) { .scoresGrid { grid-template-columns: 1fr; } }

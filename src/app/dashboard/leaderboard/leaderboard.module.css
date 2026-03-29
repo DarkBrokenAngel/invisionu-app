@@ -1,0 +1,58 @@
+.page { max-width: 900px; margin: 0 auto; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.header { margin-bottom: 24px; }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.subtitle { font-size: 14px; color: var(--text-tertiary); }
+
+.yourPosition { display: flex; align-items: center; gap: 10px; padding: 16px 24px; background: rgba(200,255,0,0.06); border: 1px solid rgba(200,255,0,0.15); border-radius: 16px; margin-bottom: 32px; }
+.yourLabel { font-size: 14px; color: var(--text-tertiary); }
+.yourRank { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--neon); }
+.yourOf { font-size: 14px; color: var(--text-muted); }
+.yourScore { margin-left: auto; font-size: 16px; font-weight: 600; color: var(--neon); }
+
+/* Podium */
+.podium { display: flex; align-items: flex-end; justify-content: center; gap: 16px; margin-bottom: 32px; padding: 20px 0; }
+.podiumCard { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px 16px 0 0; min-width: 140px; transition: all 0.3s; position: relative; }
+.podiumCard:hover { border-color: var(--border-neon); }
+.podiumYou { border-color: var(--neon) !important; box-shadow: var(--shadow-neon); }
+.podium1 { order: 2; }
+.podium2 { order: 1; }
+.podium3 { order: 3; }
+.podiumMedal { font-size: 28px; }
+.podiumAvatar { font-size: 32px; }
+.podiumName { font-size: 13px; font-weight: 600; text-align: center; }
+.podiumScore { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--neon); }
+.podiumBase { width: 100%; background: rgba(200,255,0,0.06); border-radius: 0; margin-top: 8px; }
+
+/* Filters */
+.filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.filterBtn { padding: 8px 16px; font-size: 13px; font-weight: 500; color: var(--text-tertiary); background: var(--bg-card); border: 1px solid var(--border); border-radius: 999px; transition: all 0.2s; }
+.filterBtn:hover { border-color: var(--border-hover); color: var(--text-primary); }
+.filterActive { background: var(--neon) !important; color: #000 !important; border-color: var(--neon) !important; }
+
+/* Table */
+.table { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.tableHeader { display: grid; grid-template-columns: 60px 1fr 80px 100px 70px; padding: 12px 20px; background: rgba(255,255,255,0.02); font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); }
+.tableRow { display: grid; grid-template-columns: 60px 1fr 80px 100px 70px; padding: 14px 20px; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 14px; transition: background 0.2s; animation: slideIn 0.4s ease-out backwards; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+.tableRow:hover { background: rgba(255,255,255,0.03); }
+.tableRow:last-child { border-bottom: none; }
+.tableRowYou { background: rgba(200,255,0,0.04) !important; border-left: 3px solid var(--neon); }
+
+.colRank { font-weight: 600; }
+.rankNum { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 13px; }
+.colName { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.avatar { font-size: 20px; }
+.colScore { font-weight: 600; }
+.scoreNum { color: var(--neon); font-family: var(--font-display); }
+.colLevel { font-size: 12px; color: var(--text-tertiary); }
+.colChange { font-size: 13px; font-weight: 500; }
+.changeUp { color: var(--success); }
+.changeDown { color: var(--error); }
+
+@media (max-width: 600px) {
+  .podium { flex-direction: column; align-items: center; }
+  .podium1, .podium2, .podium3 { order: unset; }
+  .tableHeader, .tableRow { grid-template-columns: 40px 1fr 60px 60px; }
+  .colLevel, .colChange { display: none; }
+}

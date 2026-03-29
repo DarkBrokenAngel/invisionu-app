@@ -1,0 +1,20 @@
+.cursorGlow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 255, 0, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+}
+
+:root[data-theme='dark'] .cursorGlow {
+  background: radial-gradient(circle, rgba(200, 255, 0, 0.05) 0%, transparent 70%);
+}
+
+@media (hover: none) {
+  .cursorGlow { display: none !important; }
+}

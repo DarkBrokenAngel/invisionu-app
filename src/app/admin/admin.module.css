@@ -1,0 +1,66 @@
+.page { display: flex; min-height: 100vh; }
+
+.sidebar { width: 220px; position: fixed; top: 0; left: 0; bottom: 0; background: rgba(8,8,8,0.95); backdrop-filter: blur(20px); border-right: 1px solid var(--border); padding: 20px 14px; display: flex; flex-direction: column; gap: 20px; z-index: 50; }
+.logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.logoIcon { color: var(--neon); font-size: 22px; }
+.logoText { font-family: var(--font-display); font-size: 20px; font-weight: 700; }
+.adminBadge { padding: 4px 12px; background: rgba(255,82,82,0.1); border: 1px solid rgba(255,82,82,0.2); border-radius: 999px; font-size: 11px; font-weight: 600; color: #FF5252; text-transform: uppercase; letter-spacing: 0.1em; width: fit-content; }
+.nav { display: flex; flex-direction: column; gap: 4px; }
+.nav button { text-align: left; padding: 10px 12px; font-size: 13px; font-weight: 500; color: var(--text-tertiary); border-radius: 10px; transition: all 0.2s; }
+.nav button:hover { color: var(--text-primary); background: rgba(255,255,255,0.04); }
+.navActive { color: var(--neon) !important; background: rgba(200,255,0,0.06) !important; }
+
+.main { flex: 1; margin-left: 220px; padding: 32px; animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 28px; }
+
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.statCard { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
+.statIcon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 18px; margin-bottom: 12px; }
+.statValue { font-family: var(--font-display); font-size: 28px; font-weight: 700; }
+.statLabel { font-size: 12px; color: var(--text-tertiary); margin-top: 4px; }
+
+.chartCard { padding: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 28px; }
+.chartCard h3 { font-size: 16px; font-weight: 600; margin-bottom: 20px; }
+.barChart { display: flex; align-items: flex-end; gap: 16px; height: 160px; }
+.barGroup { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; }
+.barTrack { flex: 1; width: 100%; display: flex; align-items: flex-end; }
+.barFill { width: 100%; background: var(--gradient-neon); border-radius: 6px 6px 0 0; min-height: 4px; position: relative; transition: height 1s ease-out; }
+.barCount { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 600; color: var(--neon); }
+.barLabel { font-size: 11px; color: var(--text-muted); }
+
+.searchBar { margin-bottom: 16px; }
+
+.table { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.tableHeader { display: grid; grid-template-columns: 40px 1.5fr 0.8fr 0.6fr 0.8fr 0.8fr; padding: 12px 20px; background: rgba(255,255,255,0.02); font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); }
+.tableRow { display: grid; grid-template-columns: 40px 1.5fr 0.8fr 0.6fr 0.8fr 0.8fr; padding: 14px 20px; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 14px; transition: background 0.2s; }
+.tableRow:hover { background: rgba(255,255,255,0.02); }
+.tableRow:last-child { border-bottom: none; }
+
+.candidateName { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+.candidateAvatar { font-size: 18px; }
+.regionTag { font-size: 12px; color: var(--text-tertiary); padding: 4px 10px; background: rgba(255,255,255,0.04); border-radius: 8px; width: fit-content; }
+
+.scoreBadge { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--score-color); }
+.statusBadge { padding: 4px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+.pendingStatus { background: rgba(255,214,0,0.1); color: var(--warning); }
+.approved { background: rgba(0,230,118,0.1); color: var(--success); }
+.rejected { background: rgba(255,82,82,0.1); color: var(--error); }
+
+.actions { display: flex; gap: 6px; }
+.approveBtn, .rejectBtn, .waitlistBtn { width: 30px; height: 30px; border-radius: 8px; font-size: 14px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.approveBtn { background: rgba(0,230,118,0.1); color: var(--success); }
+.approveBtn:hover { background: rgba(0,230,118,0.2); }
+.rejectBtn { background: rgba(255,82,82,0.1); color: var(--error); }
+.rejectBtn:hover { background: rgba(255,82,82,0.2); }
+.waitlistBtn { background: rgba(255,214,0,0.1); color: var(--warning); }
+.waitlistBtn:hover { background: rgba(255,214,0,0.2); }
+
+@media (max-width: 1024px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .sidebar { width: 60px; } .logoText, .adminBadge, .nav button span { display: none; }
+  .main { margin-left: 60px; padding: 16px; }
+  .tableHeader, .tableRow { grid-template-columns: 30px 1fr 0.5fr 0.5fr; }
+  .tableHeader span:nth-child(3), .tableRow span:nth-child(3),
+  .tableHeader span:nth-child(6), .tableRow span:nth-child(6) { display: none; }
+}
