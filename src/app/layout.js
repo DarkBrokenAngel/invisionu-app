@@ -1,6 +1,7 @@
 import './globals.css';
 import ThemeProvider from '@/components/ThemeProvider';
 import CursorTrail from '@/components/CursorTrail';
+import ParticleBackground from '@/components/ParticleBackground';
 
 export const metadata = {
   title: 'inVision U — AI-Powered Candidate Screening Platform',
@@ -15,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <CursorTrail />
+          <ParticleBackground />
           <div className="grid-bg" aria-hidden="true" />
           {children}
         </ThemeProvider>

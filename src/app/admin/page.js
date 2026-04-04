@@ -66,9 +66,9 @@ export default function AdminPage() {
         {/* Stats */}
         <div className={styles.statsGrid}>
           {[
-            { icon: '👥', value: stats.total, label: t(lang, 'admin.totalApplicants'), color: '#C8FF00' },
+            { icon: '👥', value: stats.total, label: t(lang, 'admin.totalApplicants'), color: 'var(--neon)' },
             { icon: '📊', value: stats.avgScore, label: t(lang, 'admin.avgScore'), color: '#448AFF' },
-            { icon: '✅', value: `${Math.round((stats.accepted / stats.total) * 100)}%`, label: t(lang, 'admin.acceptanceRate'), color: '#00E676' },
+            { icon: '✅', value: `${Math.round((stats.accepted / stats.total) * 100)}%`, label: t(lang, 'admin.acceptanceRate'), color: 'var(--neon)' },
             { icon: '⏳', value: stats.pending, label: t(lang, 'admin.pendingReview'), color: '#FFD600' },
           ].map((stat, i) => (
             <div key={i} className={styles.statCard}>
@@ -120,7 +120,7 @@ export default function AdminPage() {
               </span>
               <span className={styles.regionTag}>{c.region}</span>
               <span className={styles.scoreCell}>
-                <span className={styles.scoreBadge} style={{ '--score-color': c.score >= 80 ? '#00E676' : c.score >= 60 ? '#FFD600' : '#FF5252' }}>{c.score}</span>
+                <span className={styles.scoreBadge} style={{ '--score-color': c.score >= 80 ? 'var(--neon)' : c.score >= 60 ? '#FFD600' : '#FF5252' }}>{c.score}</span>
               </span>
               <span>
                 <span className={`${styles.statusBadge} ${c.status === 'approved' ? styles.approved : c.status === 'rejected' ? styles.rejected : styles.pendingStatus}`}>

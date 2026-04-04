@@ -7,6 +7,7 @@ import styles from './dashboard.module.css';
 
 const navItems = [
   { path: '/dashboard', icon: '📊', key: 'nav.dashboard' },
+  { path: '/dashboard/profile', icon: '🪪', key: 'nav.profile' },
   { path: '/dashboard/interview', icon: '🤖', key: 'nav.interview' },
   { path: '/dashboard/cv', icon: '📄', key: 'nav.cv' },
   { path: '/dashboard/motivation', icon: '✍️', key: 'nav.motivation' },
@@ -14,6 +15,7 @@ const navItems = [
   { path: '/dashboard/acceptance', icon: '🎉', key: 'nav.acceptance' },
   { path: '/dashboard/early-application', icon: '⏰', key: 'nav.earlyApp' },
   { path: '/dashboard/scholarship', icon: '❄️', key: 'nav.scholarship' },
+  { path: '/admin', icon: '🛡️', key: 'nav.admin' },
 ];
 
 export default function DashboardLayout({ children }) {

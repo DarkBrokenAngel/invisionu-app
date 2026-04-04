@@ -56,9 +56,9 @@ export default function AntigravityCheck({ loop = false, size = 150 }) {
             style={{
               '--angle': `${i * 30}deg`,
               '--delay': `${0.9 + i * 0.03}s`,
-              '--dist': `${60 + Math.random() * 30}px`,
-              '--size': `${4 + Math.random() * 4}px`,
-              background: i % 3 === 0 ? 'var(--neon)' : i % 3 === 1 ? '#4285F4' : '#34A853',
+              '--dist': `${60 + ((i * 17) % 30)}px`,
+              '--size': `${4 + ((i * 13) % 4)}px`,
+              background: i % 3 === 0 ? 'var(--neon)' : i % 3 === 1 ? '#4285F4' : 'var(--neon-dim)',
             }}
           />
         ))}

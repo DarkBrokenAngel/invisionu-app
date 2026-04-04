@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const translations = {
   en: {
     nav: {
@@ -751,11 +753,31 @@ export const translations = {
   },
 };
 
-export function t(lang, path) {
+export function t(lang, path, asString = false) {
   const keys = path.split('.');
   let result = translations[lang] || translations.en;
   for (const key of keys) {
     result = result?.[key];
   }
-  return result || path;
+  const str = result || path;
+
+  if (asString || typeof str !== 'string' || !str.match(/inVision U/i)) {
+    return str;
+  }
+
+  const parts = str.split(/(inVision U)/i);
+  return (
+    <React.Fragment>
+      {parts.map((part, i) => {
+        if (part.toLowerCase() === 'invision u') {
+          return (
+            <span key={i} style={{ whiteSpace: 'nowrap' }}>
+              inVision<span className="text-neon" style={{ marginLeft: '1px' }}>U</span>
+            </span>
+          );
+        }
+        return part;
+      })}
+    </React.Fragment>
+  );
 }

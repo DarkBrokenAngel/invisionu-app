@@ -31,7 +31,7 @@ export default function MotivationPage() {
 
       <div className={styles.editorSection}>
         <textarea className={styles.editor} value={text} onChange={(e) => setText(e.target.value)}
-          placeholder={t(lang, 'motivation.placeholder')} rows={12} disabled={!!analysis} />
+          placeholder={t(lang, 'motivation.placeholder', true)} rows={12} disabled={!!analysis} />
         <div className={styles.editorFooter}>
           <span className={`${styles.wordCount} ${wordCount >= 250 ? styles.wordCountGood : ''}`}>
             {wordCount} {t(lang, 'motivation.wordCount')} ({t(lang, 'motivation.minWords')})

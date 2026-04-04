@@ -31,13 +31,14 @@ const useStore = create(
       setLanguage: (lang) => set({ language: lang }),
 
       // Theme
-      theme: 'light',
+      theme: 'dark',
       toggleTheme: () => set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
 
       // Auth
       user: null,
       isAuthenticated: false,
       isEmailVerified: false,
+      setUser: (userData) => set({ user: userData }),
       login: (userData) => set({ user: userData, isAuthenticated: true, isEmailVerified: true }),
       logout: () => set({
         user: null,
@@ -179,7 +180,6 @@ const useStore = create(
       name: 'invisionu-store',
       partialize: (state) => ({
         language: state.language,
-        theme: state.theme,
         user: state.user,
         isAuthenticated: state.isAuthenticated,
         isEmailVerified: state.isEmailVerified,
@@ -197,6 +197,12 @@ const useStore = create(
         frozenAt: state.frozenAt,
         acceptanceStatus: state.acceptanceStatus,
         activities: state.activities,
+      }),
+      merge: (persistedState, currentState) => ({
+        ...currentState,
+        ...persistedState,
+        // Enforce dark mode on reload / ignore any local storage cache for theme
+        theme: currentState.theme,
       }),
     }
   )

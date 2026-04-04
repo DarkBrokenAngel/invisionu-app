@@ -247,7 +247,7 @@ export default function InterviewPage() {
             className={styles.textInput}
             value={answer}
             onChange={(e) => setAnswer(e.target.value)}
-            placeholder={t(lang, 'interview.placeholder')}
+            placeholder={t(lang, 'interview.placeholder', true)}
             rows={3}
             style={{ paddingRight: '50px' }}
           />

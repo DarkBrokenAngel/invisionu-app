@@ -3,11 +3,11 @@
 
 :root {
   /* Brand Colors */
-  --neon: #C8FF00;
-  --neon-dim: #9ACC00;
-  --neon-glow: rgba(200, 255, 0, 0.3);
-  --neon-subtle: rgba(200, 255, 0, 0.08);
-  --neon-border: rgba(200, 255, 0, 0.15);
+  --neon: #B4FF00;
+  --neon-dim: #8ACC00;
+  --neon-glow: rgba(180, 255, 0, 0.4);
+  --neon-subtle: rgba(180, 255, 0, 0.1);
+  --neon-border: rgba(180, 255, 0, 0.2);
 
   /* Backgrounds */
   --bg-primary: #000000;
@@ -30,16 +30,16 @@
   --border-neon: rgba(200, 255, 0, 0.2);
 
   /* Status */
-  --success: #00E676;
+  --success: var(--neon);
   --warning: #FFD600;
   --error: #FF5252;
   --info: #448AFF;
 
   /* Gradients */
-  --gradient-neon: linear-gradient(135deg, #C8FF00 0%, #76FF03 100%);
+  --gradient-neon: linear-gradient(135deg, #D4FF00 0%, #39FF14 100%);
   --gradient-dark: linear-gradient(180deg, #0A0A0A 0%, #050505 100%);
   --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-  --gradient-hero: radial-gradient(ellipse at 50% 0%, rgba(200, 255, 0, 0.08) 0%, transparent 60%);
+  --gradient-hero: radial-gradient(ellipse at 50% 0%, rgba(180, 255, 0, 0.12) 0%, transparent 60%);
 
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -66,8 +66,8 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
   --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
-  --shadow-neon: 0 0 20px rgba(200, 255, 0, 0.15), 0 0 60px rgba(200, 255, 0, 0.05);
-  --shadow-neon-strong: 0 0 30px rgba(200, 255, 0, 0.3), 0 0 80px rgba(200, 255, 0, 0.1);
+  --shadow-neon: 0 0 20px rgba(180, 255, 0, 0.2), 0 0 60px rgba(180, 255, 0, 0.08);
+  --shadow-neon-strong: 0 0 30px rgba(180, 255, 0, 0.4), 0 0 80px rgba(180, 255, 0, 0.15);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -98,10 +98,10 @@
 
   --border: rgba(0, 0, 0, 0.08);
   --border-hover: rgba(0, 0, 0, 0.15);
-  --border-neon: rgba(150, 200, 0, 0.4);
+  --border-neon: rgba(140, 200, 0, 0.5);
 
-  --shadow-neon: 0 4px 20px rgba(150, 200, 0, 0.2);
-  --shadow-neon-strong: 0 8px 30px rgba(150, 200, 0, 0.3);
+  --shadow-neon: 0 4px 20px rgba(140, 200, 0, 0.3);
+  --shadow-neon-strong: 0 8px 30px rgba(140, 200, 0, 0.4);
   
   --gradient-dark: linear-gradient(180deg, #F5F5F7 0%, #FFFFFF 100%);
 }
@@ -244,19 +244,22 @@ img {
   justify-content: center;
   gap: var(--space-sm);
   padding: 12px 28px;
-  background: transparent;
-  color: var(--neon);
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
   font-weight: 500;
   font-size: 14px;
-  border: 1px solid var(--border-neon);
+  border: 1px solid var(--border);
   border-radius: var(--radius-full);
   transition: all var(--transition-base);
 }
 
 .btn-outline:hover {
-  background: var(--neon-subtle);
-  border-color: var(--neon);
-  box-shadow: var(--shadow-neon);
+  background: var(--bg-card-hover);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-ghost {

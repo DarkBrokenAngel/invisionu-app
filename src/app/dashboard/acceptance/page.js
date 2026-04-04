@@ -12,7 +12,7 @@ function Confetti() {
           '--x': `${Math.random() * 100}vw`,
           '--delay': `${Math.random() * 2}s`,
           '--duration': `${2 + Math.random() * 3}s`,
-          '--color': ['#C8FF00', '#00E676', '#FFD600', '#448AFF', '#FF5252', '#E040FB'][Math.floor(Math.random() * 6)],
+          '--color': ['var(--neon)', 'var(--neon-dim)', '#FFD600', '#448AFF', '#FF5252', '#E040FB'][Math.floor(Math.random() * 6)],
           '--size': `${6 + Math.random() * 8}px`,
           '--rotation': `${Math.random() * 720}deg`,
         }} />

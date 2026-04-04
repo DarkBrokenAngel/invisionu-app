@@ -1,13 +1,14 @@
 'use client';
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import useStore from '@/store/useStore';
+import useStore, { LEVELS } from '@/store/useStore';
 import styles from './profile.module.css';
 
 export default function ProfilePage() {
   const router = useRouter();
   const { user, setUser, xp, getLevel, achievements } = useStore();
   const level = getLevel();
+  const levelIndex = LEVELS.findIndex(l => l.name === level.name) + 1;
   
   const cardRef = useRef(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
@@ -110,11 +111,11 @@ export default function ProfilePage() {
               </div>
               <div className={styles.statBox}>
                 <div className={styles.statLabel}>Status</div>
-                <div className={styles.statValue} style={{ color: '#00E676', fontSize: '14px', lineHeight: '24px' }}>VERIFIED</div>
+                <div className={styles.statValue} style={{ color: 'var(--neon)', fontSize: '14px', lineHeight: '24px' }}>VERIFIED</div>
               </div>
               <div className={styles.statBox}>
                 <div className={styles.statLabel}>Access</div>
-                <div className={styles.statValue} style={{ color: '#FFD600', fontSize: '14px', lineHeight: '24px' }}>LEVEL {level.level}</div>
+                <div className={styles.statValue} style={{ color: '#FFD600', fontSize: '14px', lineHeight: '24px' }}>LEVEL {levelIndex}</div>
               </div>
             </div>
 

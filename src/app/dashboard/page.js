@@ -59,8 +59,8 @@ export default function DashboardHome() {
 
   const quickActions = [
     { icon: '🪪', title: lang === 'en' ? 'Holographic ID' : 'Голографический ID', path: '/dashboard/profile', done: true, color: '#FF0055' },
-    { icon: '🤖', title: t(lang, 'dashboard.startInterview'), path: '/dashboard/interview', done: interviewCompleted, color: '#C8FF00' },
-    { icon: '📄', title: t(lang, 'dashboard.uploadCV'), path: '/dashboard/cv', done: cvUploaded, color: '#00E676' },
+    { icon: '🤖', title: t(lang, 'dashboard.startInterview'), path: '/dashboard/interview', done: interviewCompleted, color: 'var(--neon)' },
+    { icon: '📄', title: t(lang, 'dashboard.uploadCV'), path: '/dashboard/cv', done: cvUploaded, color: 'var(--neon)' },
     { icon: '✍️', title: t(lang, 'dashboard.writeLetter'), path: '/dashboard/motivation', done: motivationSubmitted, color: '#448AFF' },
     { icon: '🏆', title: t(lang, 'dashboard.viewLeaderboard'), path: '/dashboard/leaderboard', done: false, color: '#FFD600' },
   ];
