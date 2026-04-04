@@ -1,6 +1,6 @@
 <div align="center">
 
-# ◆ inVision<span style="color: #C8FF00">U</span>
+# <span style="color: #00C853">&#9670;</span> inVision<span style="color: #00C853">U</span>
 
 ### 🧠 Intelligent Candidate Selection Support System
 
@@ -8,7 +8,7 @@
 
 <img src="https://img.shields.io/badge/DECENTRATHON_5.0-FF3131?style=for-the-badge&logoColor=white" alt="Decentrathon"/>
 <img src="https://img.shields.io/badge/AI_inDrive_Track-00C853?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJMMiA3bDEwIDUgMTAtNS0xMC01ek0yIDE3bDEwIDUgMTAtNS0xMC01LTEwIDV6TTIgMTJsMTAgNSAxMC01LTEwLTUtMTAgNXoiLz48L3N2Zz4=&logoColor=white" alt="AI inDrive"/>
-<img src="https://img.shields.io/badge/STAGE_3-FINAL_SUBMISSION-C8FF00?style=for-the-badge" alt="Stage 3"/>
+<img src="https://img.shields.io/badge/STAGE_3-FINAL_SUBMISSION-00C853?style=for-the-badge" alt="Stage 3"/>
 
 <br/><br/>
 
