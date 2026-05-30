@@ -1,4 +1,4 @@
-### What if the best future leaders⚡are being filtered out — before anyone even sees them?⚠️
+#### What if the best future leaders⚡are being filtered out — before anyone even sees them?
 
 
 
