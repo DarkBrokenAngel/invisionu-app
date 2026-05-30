@@ -1,3 +1,7 @@
+What if the best future leaders are being filtered out — before anyone even sees them?
+
+
+
 <div align="center">
 
 <img src="https://img.shields.io/badge/◆_inVision-U-C8FF00?style=for-the-badge&labelColor=000&logoColor=C8FF00&fontSize=30" alt="inVisionU" height="42"/>
